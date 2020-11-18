@@ -49,15 +49,19 @@ public class Main {
 
 
 
-    //Læs fra fil 2:
+    //Læs fra fil 2: Retskrivningsordbogen
+        //https://dsn.dk/retskrivning/om-retskrivningsordbogen/ro-elektronisk-og-som-bog
+        //https://dsn.dk/retskrivning/om-retskrivningsordbogen/RO2012.opslagsord.med.homnr.og.ordklasse.zip
+        //inkluderet her og omdøbt til ro.txt
 
     String file2 ="ro.txt";
     String currentLine2;
-    BufferedReader reader2 = null;
-    try {
-        reader2 = new BufferedReader(new FileReader(file2));
 
-        while ((currentLine2 =  reader2.readLine()) != null) { //test og tildeling i samme linje
+    try {
+        BufferedReader reader2 = new BufferedReader(new FileReader(file2));
+
+                //test og tildeling i samme linje
+        while ((currentLine2 = reader2.readLine()) != null) {
             String[] ord = currentLine2.split(";");
             System.out.println(ord[0]);
         }
